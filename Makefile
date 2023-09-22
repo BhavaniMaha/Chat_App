@@ -9,3 +9,5 @@ dev-migrate:
 
 dev-makemigrations:
 	python manage.py makemigrations --settings=config.settings.dev
+dev-test:
+	python manage.py test  --settings=config.settings.dev

@@ -6,4 +6,5 @@ class User(AbstractUser):
     title = models.CharField(max_length=100, null=True, help_text="Your profession")
     
     bio = models.TextField(default="")
-    date_of_birth = models.DateField(null=True)
+    #date_of_birth = models.DateField(null=True)
+    

@@ -5,8 +5,8 @@ from apps.chat_messages import models
 
 class MessageDetails(admin.ModelAdmin):
     list_display = (
-        "username",
-        
+        "sending_user",
+        "receiving_user",
     )
     
 

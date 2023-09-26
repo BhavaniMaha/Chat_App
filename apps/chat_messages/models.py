@@ -7,13 +7,16 @@ from apps.core.models import CreatedModifiedDateTimeBase
 
 class Message(CreatedModifiedDateTimeBase):
     # id=None # If you don't want the default id to be created
-    username = models.CharField(max_length=50)
+    #username = models.CharField(max_length=50)
+    sending_user = models.ForeignKey('chat_users.User', on_delete=models.CASCADE, related_name='sending_user')
+    receiving_user = models.ForeignKey('chat_users.User', on_delete=models.CASCADE, related_name='receiving_user')
+    message_body = models.TextField()
     
     class Meta:
         verbose_name_plural = "Message"
 
     def __str__(self):
-        return self.username
+        return f'from {self.sending_user.username} to {self.receiving_user.username}'
 
 
 class Category(CreatedModifiedDateTimeBase):

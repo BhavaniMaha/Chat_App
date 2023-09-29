@@ -13,7 +13,7 @@ class Message(CreatedModifiedDateTimeBase):
     message_body = models.TextField()
     
     class Meta:
-        verbose_name_plural = "Message"
+        verbose_name_plural = "Messages"
 
     def __str__(self):
         return f'from {self.sending_user.username} to {self.receiving_user.username}'

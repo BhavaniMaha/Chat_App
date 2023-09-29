@@ -23,10 +23,10 @@ DATABASES = {
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql_psycopg2",
-        "NAME": env.str('db_name'),
-        "USER": env.str('db_user'),
-        "PASSWORD" : env.str('db_password'),
-        "HOST" : env.str('db_host'),
-        "PORT" : env.int('db_port')
+        "NAME": env.str('DB_NAME'),
+        "USER": env.str('DB_USER'),
+        "PASSWORD" : env.str('DB_PWD'),
+        "HOST" : env.str('DB_HOST'),
+        "PORT" : env.int('DB_PORT')
     }
 }
